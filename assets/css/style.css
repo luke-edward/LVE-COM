@@ -5705,19 +5705,7 @@ html {
   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) transform,
     0.4s cubic-bezier(0.075, 0.82, 0.165, 1) -webkit-transform;
 }
-#movie-bg {
-  position: fixed;
-  pointer-events: none;
-  -webkit-animation: movie 1s steps(4) infinite;
-  animation: movie 1s steps(4) infinite;
-  background-image: url(../img/movie.png);
-  height: 200%;
-  left: -50%;
-  top: -50%;
-  width: 200%;
-  opacity: 0.7;
-  z-index: 99;
-}
+
 #awesome-bg {
   position: fixed;
   background-color: #f5efe1;
