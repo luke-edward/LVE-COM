@@ -1,8 +1,8 @@
 {
     "name": "Luke Edward - Software Engineer",
-    "short_name": "LE",
-    "theme_color": "#F5EFE1",
-    "background_color": "#000000",
+    "short_name": "Luke Edward",
+    "theme_color": "#fdfdfc",
+    "background_color": "#fdfdfc",
     "display": "standalone",
     "start_url": "./",
     "scope": "./",

@@ -4,8 +4,9 @@ My personal site.
 
 **Live:** https://luke-edward.github.io/LVE-COM/
 
-Static single page — no build step. `index.html` plus `assets/`. GitHub Pages
-serves it from `main` at the repo root.
+One self-contained HTML file, about 16 KB. No JavaScript, no build step, no
+external requests, no webfonts — it renders instantly and can't break from a
+failed script. GitHub Pages serves it from `main` at the repo root.
 
 ## Local preview
 
@@ -14,17 +15,26 @@ python3 -m http.server 8000
 # then open http://127.0.0.1:8000/
 ```
 
+## Editing
+
+The page is generated, so don't hand-edit `index.html` — the next build would
+overwrite it. Content lives in `content.py` and the layout in `build_v1.py`
+(kept in the session workspace, not this repo). To change copy:
+
+```sh
+python3 build_v1.py --root > index.html
+```
+
+Without `--root` it emits the preview variant, which uses `../` asset paths and
+is marked `noindex`.
+
 ## Notes
 
-- Every asset path is relative, so the site works from a project subpath, a
-  domain root, or a custom domain without changes.
-- Asset filenames are all lowercase. Pages serves from a case-sensitive
-  filesystem while macOS is case-insensitive, so a casing mismatch will work
-  locally and 404 in production — check the deployed URL, not just localhost.
-- The works grid must keep `id="projects"`. `assets/js/master-dist.js` looks it
-  up by that id to build the WebGL grid-to-fullscreen effect.
-- Thumbnails in the works grid and `.item-full` panels in the lightbox are
-  matched **by index**. Adding one without the other silently opens the wrong
-  panel, so keep the two lists the same length and in the same order.
-- Credit: the design is based on work by
-  [Patrick David](https://www.patrickdavid.net/).
+- Asset filenames are lowercase on purpose. Pages serves from a case-sensitive
+  filesystem while macOS is case-insensitive, so a casing mismatch works
+  locally and 404s in production. Check the deployed URL, not just localhost.
+- Colors respond to `prefers-color-scheme`; motion respects
+  `prefers-reduced-motion`.
+- The previous design was a third-party template (credit: Patrick David) and
+  was replaced in full. It's still in git history if it's ever needed —
+  see commit `a0e874a`.
