@@ -121,16 +121,6 @@
         .what .blurb { color: var(--muted); margin: .3rem 0 0; font-size: .97rem; }
         .what .where { font-size: .85rem; margin-top: .1rem; }
         .what .stack { margin-top: .55rem; font-size: .82rem; }
-        .what ul { margin: .65rem 0 0; padding: 0; list-style: none; }
-        .what ul li {
-            position: relative; padding-left: .95rem; margin: 0 0 .5rem;
-            color: var(--muted); font-size: .95rem; line-height: 1.6;
-        }
-        .what ul li:last-child { margin-bottom: 0; }
-        .what ul li::before {
-            content: ""; position: absolute; left: 0; top: .64em;
-            width: 4px; height: 4px; border-radius: 50%; background: var(--line);
-        }
         .note {
             color: var(--muted); font-size: .88rem; margin: 1.25rem 0 0;
             padding-top: 1.1rem; border-top: 1px solid var(--line);
@@ -170,7 +160,7 @@
 </header>
 
 <main id="main">
-    <div class="about">        <p>I'm a software engineer at Microsoft on Windows Silicon &amp; System Integration. I build LLM-backed tooling and the large-scale telemetry infrastructure underneath it — natural-language analytics over 2B+ devices, retrieval and tool-calling layers with real verification, and pipelines that move hundreds of terabytes without falling over.</p>
+    <div class="about">        <p>I'm a software engineer at Microsoft on Windows Silicon &amp; System Integration, where I build LLM-backed tooling and the large-scale telemetry infrastructure underneath it.</p>
         <p>The part I actually care about is verification. Anyone can get a model to produce an answer; the hard problem is proving the answer wasn't invented by the same process that produced it. That idea runs through most of what I build.</p>
         <p>Before Microsoft: Dayforce, Interac, and Rogers. Honors BSc in Computer Science &amp; Data Science from Western University.</p>
     </div>
@@ -197,40 +187,25 @@
                 <strong><a href="https://www.microsoft.com/" target="_blank" rel="noreferrer">Microsoft</a></strong>
                 <span class="role">Software Engineer, Windows Silicon &amp; System Integration</span>
                 <span class="where">Redmond, WA &middot; Aug 2025 &ndash; Present</span>
-                <ul>
-                    <li>Built and shipped an internal natural-language analytics platform over device census, app inventory, and on-device telemetry spanning 2B+ Windows devices. Frontier LLMs turn analyst intent into validated KQL, cutting time-to-answer up to 90%. Used by ~100 engineers across ~10 teams, up to VP and CVP level.</li>
-                    <li>Designed the host&ndash;client retrieval and tool-calling layer (Model Context Protocol) across Kusto, Cosmos DB, and Azure OpenAI — schema grounding, query validation, and cost guardrails, so generated KQL is verified and bounded before it touches production.</li>
-                    <li>Migrated 100TB+ of device telemetry from Cosmos DB to Kusto, taking the pipeline from 13 hours to ~20 minutes by sharding it into 32 concurrent streams with backoff and resumable retries around ingestion throttling.</li>
-                    <li>Built install-tracing and app-inventory correlation from on-device tracers, pairing ML-based correlation with deterministic algorithms to attribute device behavior to specific apps, modules, and DLLs.</li>
-                </ul>
-                <span class="stack">C# &middot; Python &middot; Kusto/ADX &middot; Cosmos DB &middot; Azure OpenAI &middot; MCP</span>
+                <p class="blurb">Natural-language analytics over Windows device telemetry, and the retrieval infrastructure that makes generated queries safe to run.</p>
             </div>
         </div>
         <div class="row">
             <div class="when">2024</div>
             <div class="what">
                 <strong><a href="https://www.microsoft.com/" target="_blank" rel="noreferrer">Microsoft</a></strong>
-                <span class="role">Software Engineer Intern, Windows Fundamentals &mdash; Power</span>
+                <span class="role">Software Engineer Intern, Windows Fundamentals</span>
                 <span class="where">Redmond, WA &middot; Aug 2024 &ndash; Nov 2024</span>
-                <ul>
-                    <li>Quantified a 1-hour battery-life disparity across device types by analyzing power, trace, and session telemetry.</li>
-                    <li>Shipped a 2-minute battery gain in Microsoft Defender by affinitizing background high-QoS work to Efficient cores, found by sifting CPU c-state, frequency, and core-selection traces.</li>
-                    <li>Traced high CPU usage to repeated .dll load/unload and removed redundant VPN state checks for a further 4-minute enterprise gain.</li>
-                </ul>
-                <span class="stack">C# &middot; Kusto &middot; ETW traces</span>
+                <p class="blurb">Chased battery life through CPU traces and shipped measurable wins in shipping Windows components.</p>
             </div>
         </div>
         <div class="row">
             <div class="when">2023</div>
             <div class="what">
                 <strong><a href="https://www.dayforce.com/" target="_blank" rel="noreferrer">Dayforce</a></strong>
-                <span class="role">Software Engineer Intern, HR5 Core API</span>
+                <span class="role">Software Engineer Intern, Core API</span>
                 <span class="where">Toronto, ON &middot; Sep 2023 &ndash; Aug 2024</span>
-                <ul>
-                    <li>Increased request throughput 400% under stress and 630% under load by eliminating redundant validation calls on POST and PATCH endpoints.</li>
-                    <li>Raised API test coverage from 40% to ~85% with SpecFlow and Kafka automation; refactored C# union logic to take a POST endpoint from O(n&middot;m) to O(n).</li>
-                </ul>
-                <span class="stack">C# &middot; .NET &middot; SpecFlow &middot; Kafka &middot; JMeter</span>
+                <p class="blurb">API performance and test infrastructure for an enterprise HR platform.</p>
             </div>
         </div>
         <div class="row">
@@ -239,10 +214,7 @@
                 <strong><a href="https://www.interac.ca/" target="_blank" rel="noreferrer">Interac</a></strong>
                 <span class="role">Product Research, Design &amp; Development Intern</span>
                 <span class="where">Toronto, ON &middot; May 2023 &ndash; Aug 2023</span>
-                <ul>
-                    <li>Proposed and led development of a REST API for escrow flows on the e-Transfer emulator, integrated into a Nest.js backend and Angular frontend and containerized with Docker.</li>
-                </ul>
-                <span class="stack">Node.js &middot; Express &middot; PostgreSQL &middot; Angular &middot; Docker</span>
+                <p class="blurb">Proposed and led an escrow API for the e-Transfer emulator, end to end.</p>
             </div>
         </div>
         <div class="row">
@@ -251,10 +223,7 @@
                 <strong><a href="https://www.rogers.com/" target="_blank" rel="noreferrer">Rogers Communications</a></strong>
                 <span class="role">Software Engineer Intern, 5G Create Lab</span>
                 <span class="where">Waterloo, ON &middot; Two terms</span>
-                <ul>
-                    <li>Built a full-stack Smart Parking app on Rogers 5G sensors for the UWaterloo Smart City project, with availability detection over GraphQL, Firebase, and Apollo.</li>
-                </ul>
-                <span class="stack">Ionic Angular &middot; GraphQL &middot; Firebase &middot; Apollo</span>
+                <p class="blurb">Full-stack smart parking app built on 5G sensors for a university smart-city project.</p>
             </div>
         </div>
         <p class="note">Earlier: Design Thinking Program at RBC; Digital Marketing Manager at Aire One; Front-End Developer at Logics Academy; and founder of <a href="https://www.newswire.ca/news-releases/young-entrepreneurs-make-your-pitch-competition-winners-announced-at-discovery-2018-681411841.html" target="_blank" rel="noreferrer">BookSmart</a>, which won Ontario’s Make Your Pitch competition.</p>
@@ -266,7 +235,7 @@
             <div class="when"></div>
             <div class="what">
                 <strong>Agent Research Harness</strong>
-                <p class="blurb">Runs LLM agents against unsolved math problems and refuses to take their word for it. Every result is re-checked by a second, independent solver and re-derived by scripts sharing no code with the original, so a bug or a hallucination cannot confirm itself — and every claim traces back to the exact run that produced it. Yielded independently verified results on two open Erdős problems.</p>
+                <p class="blurb">Runs LLM agents against unsolved math problems and refuses to take their word for it — every result is re-checked by an independent solver that shares no code with the original. Produced independently verified results on two open Erdős problems.</p>
                 <span class="stack">Python &middot; LLM agents &middot; verification harnesses</span>
             </div>
         </div>
@@ -274,7 +243,7 @@
             <div class="when"></div>
             <div class="what">
                 <strong>Bellwether</strong>
-                <p class="blurb">Ranks feature requests by the revenue they cost you. Parses sales-call transcripts, extracts what customers actually asked for, and joins it to CRM data so every roadmap item arrives with a dollar figure and the list of deals behind it.</p>
+                <p class="blurb">Ranks feature requests by the revenue behind them — parses sales-call transcripts and joins what customers asked for to CRM data, so every roadmap item carries a dollar figure.</p>
                 <span class="stack">TypeScript &middot; LLM extraction &middot; CRM &middot; data pipeline</span>
             </div>
         </div>
