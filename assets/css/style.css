@@ -198,39 +198,39 @@ button {
 }
 @font-face {
   font-family: "Monument";
-  src: url("../fonts/MonumentExtended-Ultrabold.eot");
-  src: url("../fonts/MonumentExtended-Ultraboldd41d.eot?#iefix")
+  src: url("../fonts/monumentextended-ultrabold.eot");
+  src: url("../fonts/monumentextended-ultraboldd41d.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/MonumentExtended-Ultrabold.woff2") format("woff2"),
-    url("../fonts/MonumentExtended-Ultrabold.woff") format("woff"),
-    url("../fonts/MonumentExtended-Ultrabold.ttf") format("truetype"),
-    url("../fonts/MonumentExtended-Ultrabold.svg#MonumentExtended-Ultrabold")
+    url("../fonts/monumentextended-ultrabold.woff2") format("woff2"),
+    url("../fonts/monumentextended-ultrabold.woff") format("woff"),
+    url("../fonts/monumentextended-ultrabold.ttf") format("truetype"),
+    url("../fonts/monumentextended-ultrabold.svg#monumentextended-ultrabold")
       format("svg");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "Monument";
-  src: url("../fonts/MonumentExtended-Regular.eot");
-  src: url("../fonts/MonumentExtended-Regulard41d.eot?#iefix")
+  src: url("../fonts/monumentextended-regular.eot");
+  src: url("../fonts/monumentextended-regulard41d.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/MonumentExtended-Regular.woff2") format("woff2"),
-    url("../fonts/MonumentExtended-Regular.woff") format("woff"),
-    url("../fonts/MonumentExtended-Regular.ttf") format("truetype"),
-    url("../fonts/MonumentExtended-Regular.svg#MonumentExtended-Regular")
+    url("../fonts/monumentextended-regular.woff2") format("woff2"),
+    url("../fonts/monumentextended-regular.woff") format("woff"),
+    url("../fonts/monumentextended-regular.ttf") format("truetype"),
+    url("../fonts/monumentextended-regular.svg#monumentextended-regular")
       format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "P";
-  src: url("../fonts/UniviaPro-Regular.eot");
-  src: url("../fonts/UniviaPro-Regulard41d.eot?#iefix")
+  src: url("../fonts/univiapro-regular.eot");
+  src: url("../fonts/univiapro-regulard41d.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/UniviaPro-Regular.woff2") format("woff2"),
-    url("../fonts/UniviaPro-Regular.woff") format("woff"),
-    url("../fonts/UniviaPro-Regular.ttf") format("truetype"),
-    url("../fonts/UniviaPro-Regular.svg#UniviaPro-Regular") format("svg");
+    url("../fonts/univiapro-regular.woff2") format("woff2"),
+    url("../fonts/univiapro-regular.woff") format("woff"),
+    url("../fonts/univiapro-regular.ttf") format("truetype"),
+    url("../fonts/univiapro-regular.svg#univiapro-regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
