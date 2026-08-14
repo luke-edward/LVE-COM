@@ -10908,6 +10908,9 @@ function WebpIsSupported(t) {
 }
 function preloadImages(t) {
   preloadImages.list || (preloadImages.list = []);
+  t = (t || []).filter(function (u) {
+    return "string" == typeof u && u.length && "undefined" !== u;
+  });
   for (var e = preloadImages.list, n = 0; n < t.length; n++) {
     var i = new Image();
     (i.onload = function () {
